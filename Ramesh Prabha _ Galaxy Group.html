@@ -7,15 +7,15 @@
 <meta name="description" content="Ramesh Prabha: business, marketing, branding and media consultant, political strategist, career counsellor, motivational speaker and chief guest. A Galaxy Group organisation.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --forest:#062F22; --plum:#1A0D3F; --wine:#3A0C3F;
-  --sun:#FFC83D; --tang:#FF7A3D; --pink:#F0287F; --violet:#8A3FD1; --blue:#2F6BFF; --sky:#4FD1F5; --lime:#9BE23B; --green:#1FA35C;
-  --cream:#FFF6E5; --ink:#0E2A21; --text:#FFF8EC; --muted:rgba(255,248,236,.72);
-  --spectrum:linear-gradient(100deg,#FFC83D,#FF7A3D,#F0287F,#8A3FD1,#2F6BFF,#4FD1F5,#9BE23B,#FFC83D);
-  --display:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;
-  --body:"Figtree","Segoe UI",system-ui,sans-serif;
+  --forest:#394735; --plum:#F5F4EF; --wine:#ECEAE2;
+  --sun:#984C68; --tang:#75815D; --pink:#984C68; --violet:#805466; --blue:#65735C; --sky:#849078; --lime:#899573; --green:#59694D;
+  --cream:#F4F2EC; --ink:#29352C; --text:#29352C; --muted:rgba(41,53,44,.72);
+  --spectrum:linear-gradient(110deg,#687653 0%,#984C68 100%);
+  --display:"DM Sans","Segoe UI",system-ui,sans-serif;
+  --body:"DM Sans","Segoe UI",system-ui,sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
@@ -44,7 +44,7 @@ h1,h2,h3{font-family:var(--display);line-height:1.05;letter-spacing:-.025em}
 
 /* ---------- header ---------- */
 .grp{position:relative;z-index:60;display:flex;justify-content:center;gap:.4rem 1.2rem;flex-wrap:wrap;padding:.55rem 1rem;font-size:.82rem;font-weight:500;
-  background:linear-gradient(90deg,#0b5d34,#1FA35C,#0b5d34);background-size:200% 100%;animation:hue 14s linear infinite}
+  background:var(--forest)}
 .grp b{font-weight:700}
 @media(max-width:600px){.grp>span{display:none}.grp{font-size:.78rem}}
 .grp a{opacity:.9;border-bottom:1px solid transparent}
@@ -92,9 +92,8 @@ main{position:relative;z-index:2;outline:none}
 
 /* ---------- buttons ---------- */
 .btn{display:inline-flex;align-items:center;gap:.6rem;padding:.95rem 1.6rem;border-radius:999px;font-weight:700;font-size:1rem;color:#fff;
-  background:linear-gradient(100deg,#FF7A3D,#F0287F,#8A3FD1,#FF7A3D);background-size:300% 100%;animation:slide3 6s linear infinite;
-  box-shadow:0 12px 30px rgba(240,40,127,.4);transition:transform .25s,box-shadow .25s}
-.btn:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 18px 40px rgba(240,40,127,.55)}
+  background:var(--forest);box-shadow:0 8px 20px rgba(57,71,53,.18);transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(57,71,53,.24)}
 .btn.alt{background:rgba(255,255,255,.12);box-shadow:inset 0 0 0 2px rgba(255,255,255,.45);animation:none}
 .btn.alt:hover{background:#fff;color:var(--ink)}
 .btn svg{width:18px;height:18px;transition:transform .25s}
@@ -141,8 +140,8 @@ main{position:relative;z-index:2;outline:none}
 .disc .lab{position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);white-space:nowrap;font-size:.74rem;font-weight:700;padding:.2rem .65rem;border-radius:999px;background:rgba(10,10,40,.72);backdrop-filter:blur(6px)}
 .dot{position:absolute;width:var(--s);height:var(--s);border-radius:50%;background:var(--c);box-shadow:0 0 12px var(--c);transform:translate(-50%,-50%)}
 .core{position:absolute;left:50%;top:50%;width:30cqw;height:30cqw;transform:translate(-50%,-50%);border-radius:50%}
-.core::before,.core::after{content:"";position:absolute;inset:0;border-radius:50%;background:conic-gradient(#FF7A3D,#F0287F,#8A3FD1,#2F6BFF,#4FD1F5,#9BE23B,#FFC83D,#FF7A3D);animation:spin 9s linear infinite}
-.core::after{inset:-8%;filter:blur(28px);opacity:.75;animation-direction:reverse;animation-duration:13s}
+.core::before,.core::after{content:"";position:absolute;inset:0;border-radius:50%;background:var(--spectrum)}
+.core::after{inset:-8%;filter:blur(28px);opacity:.18}
 .core .in{position:absolute;inset:8%;z-index:2;border-radius:50%;display:grid;place-items:center;text-align:center;
   background:radial-gradient(circle at 30% 22%,#14774a,var(--forest) 70%);box-shadow:inset 0 0 30px rgba(0,0,0,.5)}
 .core b{font-family:var(--display);font-weight:800;font-size:9.5cqw;letter-spacing:-.05em;line-height:1;background:var(--spectrum);background-size:400% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:hue 6s linear infinite}
@@ -176,8 +175,8 @@ main{position:relative;z-index:2;outline:none}
 .paths{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;margin-top:3rem}
 .path{position:relative;border-radius:36px;padding:2.4rem;min-height:440px;overflow:hidden;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;
   background:var(--g);background-size:300% 300%;animation:flow 10s ease-in-out infinite alternate;transform-style:preserve-3d;transition:transform .2s ease-out;box-shadow:0 30px 70px rgba(0,0,0,.4)}
-.path.a{--g:linear-gradient(135deg,#FF7A3D,#F0287F,#8A3FD1,#FF7A3D)}
-.path.b{--g:linear-gradient(135deg,#1FA35C,#4FD1F5,#2F6BFF,#1FA35C);animation-delay:-4s}
+.path.a{--g:linear-gradient(135deg,#53634A,#394735)}
+.path.b{--g:linear-gradient(135deg,#805466,#684352)}
 @keyframes flow{from{background-position:0% 0%}to{background-position:100% 100%}}
 .path h3{font-size:clamp(2.2rem,4.5vw,3.6rem);font-weight:800;margin-bottom:.7rem}
 .path p{max-width:26rem;opacity:.95;margin-bottom:1.4rem}
@@ -218,9 +217,9 @@ main{position:relative;z-index:2;outline:none}
 /* stats */
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
 .stat{border-radius:30px;padding:2.2rem 2rem;color:#fff;position:relative;overflow:hidden;background:var(--g);background-size:300% 300%;animation:flow 9s ease-in-out infinite alternate}
-.stat:nth-child(1){--g:linear-gradient(135deg,#F0287F,#8A3FD1,#F0287F)}
-.stat:nth-child(2){--g:linear-gradient(135deg,#FF7A3D,#FFC83D,#FF7A3D);color:#2b1400;animation-delay:-3s}
-.stat:nth-child(3){--g:linear-gradient(135deg,#1FA35C,#4FD1F5,#1FA35C);animation-delay:-6s}
+.stat:nth-child(1){--g:linear-gradient(135deg,#805466,#684352)}
+.stat:nth-child(2){--g:linear-gradient(135deg,#667451,#4C5B3F)}
+.stat:nth-child(3){--g:linear-gradient(135deg,#53634A,#394735)}
 .stat b{display:block;font-family:var(--display);font-weight:800;font-size:clamp(3.4rem,8vw,6rem);line-height:1;letter-spacing:-.04em}
 .stat span{font-weight:600;font-size:1.1rem}
 .stat::after{content:"";position:absolute;width:150px;height:150px;border-radius:50%;right:-40px;bottom:-50px;background:rgba(255,255,255,.22);animation:bob 8s ease-in-out infinite}
@@ -315,7 +314,7 @@ main{position:relative;z-index:2;outline:none}
 .form .st{min-height:1.5rem;font-weight:600;color:var(--sun)}
 @media(max-width:560px){.form .row{grid-template-columns:1fr}}
 .side{display:grid;gap:1.2rem}
-.sbox{position:relative;border-radius:32px;padding:2rem;overflow:hidden;color:#fff;background:linear-gradient(135deg,#1FA35C,#2F6BFF,#8A3FD1,#1FA35C);background-size:300% 300%;animation:flow 9s ease-in-out infinite alternate}
+.sbox{position:relative;border-radius:32px;padding:2rem;overflow:hidden;color:#fff;background:var(--forest)}
 .sbox h3{font-size:1.7rem;margin-bottom:.6rem;position:relative}
 .sbox p,.sbox li{position:relative}
 .sbox ul{list-style:none;display:grid;gap:.5rem;margin-top:1rem}
@@ -341,6 +340,87 @@ footer::before{content:"";position:absolute;left:0;right:0;top:0;height:5px;back
   *,*::before,*::after{animation-duration:.001s!important;animation-iteration-count:1!important;transition-duration:.001s!important;scroll-behavior:auto!important}
   #glow{display:none}
 }
+
+/* Restrained olive and magenta palette */
+body{background:#F5F4EF;color:var(--text)}
+#stars,.aurora,#glow{display:none}
+#prog{height:3px;background:var(--spectrum);animation:none}
+.grp{background:var(--forest);animation:none;color:#fff}
+.brand strong,.band h2{color:var(--forest)}
+.pill{box-shadow:0 8px 28px rgba(35,45,35,.12),0 0 0 1px rgba(41,53,44,.08)}
+.menu>li>a:hover,.menu>li>button:hover,.menu>li:focus-within>button,.menu>li>a.on,.menu>li>button.on{background:var(--forest);color:#fff}
+.burger{background:var(--forest)}
+.mnav{background:var(--forest)}
+.mnav .g{border-color:var(--pink)}
+.btn{background:var(--forest);animation:none;box-shadow:0 8px 20px rgba(57,71,53,.18)}
+.btn:hover{box-shadow:0 12px 26px rgba(57,71,53,.24)}
+.btn.alt{color:var(--forest);background:rgba(255,255,255,.72);box-shadow:inset 0 0 0 1px rgba(57,71,53,.22)}
+.btn.alt:hover{background:var(--forest);color:#fff}
+.hname .l,.core b,.cta h2,.phead h1{background:var(--spectrum);background-size:100% 100%;animation:none;-webkit-background-clip:text;background-clip:text}
+.hname .line,.hname .l{animation:none}
+.chip{background:#fff;color:var(--forest);box-shadow:inset 0 0 0 1px rgba(57,71,53,.15)}
+.chip i{background:var(--tang);box-shadow:none;animation:none}
+.swap span{color:var(--pink)}
+.mroles a{background:rgba(57,71,53,.06);box-shadow:inset 0 0 0 1px rgba(57,71,53,.16)}
+.ring{border-color:rgba(57,71,53,.2);animation:none}
+.ring.c{border-color:rgba(57,71,53,.12)}
+.disc{box-shadow:0 5px 16px rgba(41,53,44,.14),inset 0 1px 0 rgba(255,255,255,.55)}
+.disc .lab{background:rgba(41,53,44,.88)}
+.dot{box-shadow:none}
+.core::before,.core::after{background:var(--spectrum);animation:none}
+.core::after{opacity:.18}
+.core .in{background:var(--forest);box-shadow:inset 0 0 20px rgba(0,0,0,.2)}
+.core small{color:rgba(255,255,255,.72)}
+.rip{border-color:rgba(57,71,53,.18);animation:none;opacity:.3}
+.ribbon{transform:none;background:var(--forest);animation:none;box-shadow:0 8px 24px rgba(41,53,44,.12)}
+.ribbon .track>span{text-shadow:none}
+.path{animation:none;box-shadow:0 18px 42px rgba(41,53,44,.14)}
+.path.a{--g:linear-gradient(135deg,#53634A,#394735)}
+.path.b{--g:linear-gradient(135deg,#805466,#684352)}
+.blob,.path .bigico{animation:none}
+.path .tags a{background:rgba(255,255,255,.14)}
+.path .tags a:hover{background:#fff;color:var(--forest)}
+.vtrack button:hover{box-shadow:0 12px 28px rgba(41,53,44,.18)}
+.band{background:var(--cream);color:var(--ink);clip-path:none;border-block:1px solid rgba(41,53,44,.08)}
+.band .btn{color:#fff}
+.lg{border-radius:12px;box-shadow:0 4px 16px rgba(41,53,44,.08),inset 0 0 0 1px rgba(41,53,44,.08)}
+.lg:hover{transform:translateY(-3px)}
+.stat{animation:none}
+.stat:nth-child(1){--g:linear-gradient(135deg,#805466,#684352);color:#fff}
+.stat:nth-child(2){--g:linear-gradient(135deg,#667451,#4C5B3F);color:#fff}
+.stat:nth-child(3){--g:linear-gradient(135deg,#53634A,#394735);color:#fff}
+.stat::after{animation:none}
+.cta h2{color:var(--forest)}
+.phead h1{color:var(--forest)}
+.float{display:none}
+.crumbs a:hover,.fg a:hover{color:var(--pink)}
+.bigicon{box-shadow:0 16px 34px rgba(41,53,44,.14);animation:none}
+.bigicon svg{animation:none}
+.rc{background:#fff;box-shadow:0 6px 22px rgba(41,53,44,.07),inset 0 0 0 1px rgba(41,53,44,.08);backdrop-filter:none}
+.rc::before{opacity:.08;filter:blur(38px);animation:none}
+.rc .ic{box-shadow:0 5px 14px rgba(41,53,44,.12);animation:none}
+.rc .go{color:var(--pink)}
+.pt{background:#fff;box-shadow:inset 0 0 0 1px rgba(41,53,44,.1)}
+.pt::after{height:3px;background:var(--spectrum);animation:none}
+.others a{background:#fff;box-shadow:inset 0 0 0 1px rgba(41,53,44,.12)}
+.others a:hover{background:var(--cream)}
+.filters button{background:#fff;color:var(--ink);box-shadow:inset 0 0 0 1px rgba(41,53,44,.18)}
+.filters button[aria-pressed=true]{background:var(--forest);box-shadow:0 5px 14px rgba(57,71,53,.16)}
+.pf{box-shadow:0 6px 20px rgba(41,53,44,.12);animation:none}
+.pf:hover{box-shadow:0 10px 26px rgba(41,53,44,.2)}
+.pf figcaption{background:linear-gradient(transparent,rgba(30,38,31,.84))}
+#lb .x:hover,#lb .n:hover{background:var(--pink)}
+.names .track>span{color:var(--forest);background:#fff;border:1px solid rgba(41,53,44,.12)}
+.form{background:#fff;box-shadow:inset 0 0 0 1px rgba(41,53,44,.1);backdrop-filter:none}
+.form input,.form select,.form textarea{background:#F7F6F2;border:1px solid rgba(41,53,44,.16)}
+.form input:focus,.form select:focus,.form textarea:focus{border-color:var(--pink);box-shadow:0 0 0 3px rgba(152,76,104,.14)}
+.form .st{color:var(--pink)}
+.sbox{background:var(--forest);animation:none}
+.sbox li a{background:rgba(255,255,255,.1)}
+.sbox li a:hover{color:var(--forest)}
+footer{background:#263228}
+footer::before{height:3px;background:var(--spectrum);animation:none}
+.copy{border-color:rgba(255,255,255,.14)}
 </style>
 </head>
 <body>
@@ -407,45 +487,45 @@ const ico = (n, w=2) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentCol
 
 /* ---------- content ---------- */
 const GROUPS = {
-  consultant:{ name:"Consultant", intro:"Six ways Ramesh Prabha helps businesses, brands and campaigns find direction and move with confidence.", c:["#FF7A3D","#F0287F"] },
-  educationist:{ name:"Educationist", intro:"Three ways Ramesh Prabha helps students, teams and communities learn, aim higher and celebrate.", c:["#1FA35C","#2F6BFF"] }
+  consultant:{ name:"Consultant", intro:"Six ways Ramesh Prabha helps businesses, brands and campaigns find direction and move with confidence.", c:["#75815D","#984C68"] },
+  educationist:{ name:"Educationist", intro:"Three ways Ramesh Prabha helps students, teams and communities learn, aim higher and celebrate.", c:["#59694D","#805466"] }
 };
 const ROLES = {
   consultant:[
-   {id:"business-advisor",name:"Business Advisor",icon:"briefcase",c1:"#FFC83D",c2:"#FF7A3D",line:"Plain-spoken guidance on where the business goes next.",
+   {id:"business-advisor",name:"Business Advisor",icon:"briefcase",c1:"#75815D",c2:"#59694D",line:"Plain-spoken guidance on where the business goes next.",
     intro:"Clear, practical guidance for owners and leaders who are deciding where the business goes next.",
     pts:[["Sharpen the plan","Turn goals into priorities, timelines and owners that a team can act on."],["Read the market","Understand customers, competitors and where the next opening sits."],["Decide with confidence","A sounding board for the calls that are hard to make alone."]],pick:["Apollo","Aban","HTC","Central"]},
-   {id:"marketing-consultant",name:"Marketing Consultant",icon:"megaphone",c1:"#FF7A3D",c2:"#F0287F",line:"Marketing that starts with the customer.",
+   {id:"marketing-consultant",name:"Marketing Consultant",icon:"megaphone",c1:"#75815D",c2:"#984C68",line:"Marketing that starts with the customer.",
     intro:"Marketing that starts from the customer and ends in results you can measure.",
     pts:[["Know the audience","Define who you are speaking to and why they should choose you."],["Choose the channels","Balance print, television, radio, outdoor and digital for the budget at hand."],["Plan and review","Campaigns with a clear brief, a calendar and a look back at what worked."]],pick:["INOX","Fitness","Godrej","Rex"]},
-   {id:"branding-consultant",name:"Branding Consultant",icon:"star",c1:"#F0287F",c2:"#8A3FD1",line:"A brand people recognise and trust.",
+   {id:"branding-consultant",name:"Branding Consultant",icon:"star",c1:"#984C68",c2:"#805466",line:"A brand people recognise and trust.",
     intro:"A brand that people recognise, remember and trust, from the first sight of the name to the last detail of the pack.",
     pts:[["Name and identity","Names, logos and visual systems that feel like one family."],["Message and voice","One clear promise, said the same way everywhere."],["Consistency","Guidance so every ad, hoarding and brochure carries the same character."]],pick:["Choice","Sanjeevanam","Gold","Lalitha"]},
-   {id:"media-consultant",name:"Media Consultant",icon:"media",c1:"#8A3FD1",c2:"#2F6BFF",line:"The right message in the right medium.",
+   {id:"media-consultant",name:"Media Consultant",icon:"media",c1:"#805466",c2:"#75815D",line:"The right message in the right medium.",
     intro:"Put the right message in front of the right audience, in the right medium, at the right time.",
     pts:[["Media planning","Match the audience to newspapers, television, radio, outdoor and digital."],["Buying and releases","Schedules, releases and follow-through handled with care."],["Review","Look at what reached people and adjust the next round."]],pick:["Puthiya","BSNL","Sarath","hoarding"]},
-   {id:"nativity-consultant",name:"Nativity Consultant",icon:"chat",c1:"#2F6BFF",c2:"#4FD1F5",line:"Messages that sound native to the place.",
+   {id:"nativity-consultant",name:"Nativity Consultant",icon:"chat",c1:"#75815D",c2:"#899573",line:"Messages that sound native to the place.",
     intro:"Messages that sound native to the place and the people they speak to, in language, tone and imagery.",
     pts:[["Language and copy","Check translations and phrasing so they read naturally, not literally."],["Cultural fit","Spot images, colours and references that may land differently in a region."],["Regional adaptation","Adapt a national idea for local audiences without losing its core."]],pick:["YRG","Puthiya","Gold","Pithambari"]},
-   {id:"political-strategist",name:"Political Strategist",icon:"flag",c1:"#4FD1F5",c2:"#1FA35C",line:"Communication strategy for campaigns.",
+   {id:"political-strategist",name:"Political Strategist",icon:"flag",c1:"#984C68",c2:"#805466",line:"Communication strategy for campaigns.",
     intro:"Communication strategy for campaigns that need to reach people clearly and consistently.",
     pts:[["Frame the message","Shape a simple, memorable message from a long list of issues."],["Plan the outreach","Sequence hoardings, press, broadcast and digital across the campaign calendar."],["Keep it consistent","One look and one voice from the first poster to the final rally."]],pick:["hoarding","TAI","BSNL","Sarath"]}
   ],
   educationist:[
-   {id:"career-guidance-counsellor",name:"Career Guidance Counsellor",icon:"compass",c1:"#9BE23B",c2:"#1FA35C",line:"Helping students choose a path and prepare for it.",
+   {id:"career-guidance-counsellor",name:"Career Guidance Counsellor",icon:"compass",c1:"#75815D",c2:"#59694D",line:"Helping students choose a path and prepare for it.",
     intro:"Helping students and young professionals choose a path and prepare to walk it.",
     pts:[["Know yourself","Look at strengths, interests and values before looking at courses."],["See the options","Understand courses, careers and what each one asks of you."],["Make a plan","Turn a choice into steps, with someone to check in along the way."]],pick:["Apollo","Good","IECT","Sarath"]},
-   {id:"motivational-speaker",name:"Motivational Speaker",icon:"mic",c1:"#FFC83D",c2:"#F0287F",line:"Talks that give audiences energy and direction.",
+   {id:"motivational-speaker",name:"Motivational Speaker",icon:"mic",c1:"#984C68",c2:"#805466",line:"Talks that give audiences energy and direction.",
     intro:"Talks that give students, teams and audiences energy, and a direction to point it in.",
     pts:[["Schools and colleges","Sessions that speak to students about effort, choices and confidence."],["Corporate teams","Talks that refresh a team's sense of purpose and pace."],["Public events","An engaging voice for conferences, community gatherings and celebrations."]],pick:["Good","Fitness","Afton","Ajuba"]},
-   {id:"chief-guest",name:"Chief Guest",icon:"award",c1:"#FF7A3D",c2:"#8A3FD1",line:"A welcome presence at your event.",
+   {id:"chief-guest",name:"Chief Guest",icon:"award",c1:"#75815D",c2:"#984C68",line:"A welcome presence at your event.",
     intro:"A welcome presence for school, college, corporate and community events.",
     pts:[["Annual days and convocations","Words and presence that make a milestone feel special."],["Launches and inaugurations","Open a new centre, product or campaign with the right note."],["Awards and felicitations","Recognise achievers in a way they and their families remember."]],pick:["Good","Apollo","Paavai","IECT"]}
   ]
 };
 const ALL = [...ROLES.consultant.map(r=>({...r,g:"consultant"})), ...ROLES.educationist.map(r=>({...r,g:"educationist"}))];
 const CLIENT_NAMES = ["Apollo Computer Education Ltd.","Apollo Group of Colleges","Aban Constructions (P) Ltd.","Aban Off Shore Ltd.","Baashyaam Constructions","BSNL","Best Cast IT Ltd.","Central Cottage Industries Corporation","Choice Deccors","Darshana Traditional Products","DIPR (Tamil Nadu State Government)","DIPR (Andhra Pradesh State Government)","Dynamic Staffing Services Ltd.","Elmarc Electrodes Pvt. Ltd.","Fitness One","Goodshepherd Convent, Ooty","HTC Global Services (India) Pvt Ltd.","India Post","IFFCO","INOX","Kabirdass Motor Co., Ltd.","Khal's Foot World","Kirloskar Construction & Engineers Ltd.","Lalitha Jewellery Mart (P) Ltd.","Madura Travel Service (P) Ltd.","Magnum Clothing (P) Ltd.","Ministry of IT & Telecom","Mithas Labs","Paavai Educational Institutions","P.ORR & Sons","Repco Bank","Sakthi Aromatic Masalas Pvt. Ltd.","Sears Fitness","Shagun Health Products","Sharath Educational Promoters","Shriram Group","Solker Solar Industry Limited","Swiss School of Tourism & Hospitality Ltd","TAI - VHS Chennai","YRG Care"];
-const SPEC = ["#FFC83D","#FF7A3D","#F0287F","#8A3FD1","#2F6BFF","#4FD1F5","#9BE23B","#1FA35C"];
+const SPEC = ["#75815D","#984C68","#59694D","#805466","#899573","#A56C83","#667451","#875267"];
 
 /* ---------- small helpers ---------- */
 const sty = r => `--c1:${r.c1};--c2:${r.c2}`;
