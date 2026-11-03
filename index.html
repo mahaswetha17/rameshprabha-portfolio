@@ -436,6 +436,58 @@ footer .fg a:hover{color:#D9C6EA}
 /* Offset the outer ring so its planets sit between the inner ones */
 .orbit>.ring:nth-of-type(3){transform:rotate(30deg)}
 .orbit>.ring:nth-of-type(3) .cs{transform:rotate(-30deg)}
+
+/* ===== Four-shade purple palette from the Galaxy logo =====
+   Deep #3C2460, Royal #5B3A81, Orchid #8554A0, Lilac #B074B2 */
+:root{--p1:#3C2460;--p2:#5B3A81;--p3:#8554A0;--p4:#B074B2;--p5:#E8D9F0;
+  --spectrum:linear-gradient(100deg,#3C2460 0%,#5B3A81 34%,#8554A0 68%,#B074B2 100%);
+  --spec-text:linear-gradient(100deg,#3C2460 0%,#5B3A81 55%,#8554A0 100%);
+  --pink:#8554A0;--sun:#B074B2}
+body{background:radial-gradient(60vmax 45vmax at 100% 0%,#E8D9F0 0%,rgba(232,217,240,0) 65%),radial-gradient(55vmax 45vmax at 0% 100%,#EEE2F5 0%,rgba(238,226,245,0) 65%),#F6F2FA;background-attachment:fixed}
+.grp{background:var(--p1)}
+.brand strong,.band h2,.sec h2{color:var(--p1)}
+.btn{background:linear-gradient(100deg,var(--p2),var(--p3))}
+.btn:hover{background:linear-gradient(100deg,var(--p1),var(--p2))}
+.btn.alt{background:rgba(255,255,255,.72)}
+.btn.alt:hover{background:var(--p2);color:#fff}
+.burger{background:var(--p2)}
+.mnav{background:var(--p1)}
+.mnav .g{border-color:var(--p4)}
+.menu>li>a:hover,.menu>li>button:hover,.menu>li:focus-within>button,.menu>li>a.on,.menu>li>button.on{background:var(--p2)}
+.hname .l{background:none;-webkit-background-clip:border-box;background-clip:border-box;-webkit-text-fill-color:currentColor;color:var(--p2)}
+.hname .l:nth-child(4n+1){color:var(--p1)}
+.hname .l:nth-child(4n+3){color:var(--p3)}
+.phead h1,.cta h2{width:fit-content;max-width:100%;background:var(--spec-text);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.cta h2{margin-inline:auto}
+.chip i{background:var(--p4)}
+.mroles a{background:rgba(133,84,160,.1)}
+.core::before,.core::after{background:conic-gradient(var(--p1),var(--p2),var(--p3),var(--p4),var(--p3),var(--p2),var(--p1))}
+.core::after{opacity:.4;filter:blur(24px)}
+.core .in{background:radial-gradient(circle at 30% 25%,var(--p3),var(--p2) 55%,var(--p1))}
+.rip{border-color:var(--p3);opacity:.25}
+.ribbon{background:linear-gradient(90deg,var(--p1),var(--p2) 35%,var(--p3) 70%,var(--p2))}
+.path.a{--g:linear-gradient(135deg,#3C2460,#5B3A81 70%,#6E4592)}
+.path.b{--g:linear-gradient(135deg,#5B3A81,#8554A0)}
+.band{background:linear-gradient(180deg,#EADCF3,#F3EBF8)}
+.stat:nth-child(1){--g:linear-gradient(135deg,#3C2460,#5B3A81)}
+.stat:nth-child(2){--g:linear-gradient(135deg,#5B3A81,#8554A0)}
+.stat:nth-child(3){--g:linear-gradient(135deg,#8554A0,#6B3F90)}
+.rc::before{opacity:.22}
+.pt h3{color:var(--p1)}
+.others a:hover{background:var(--p5)}
+.filters button[aria-pressed=true]{background:var(--p2)}
+.names .track>span:nth-child(4n+1){background:var(--p5);color:var(--p1);border-color:transparent}
+.names .track>span:nth-child(4n+2){background:var(--p2);color:#fff;border-color:transparent}
+.names .track>span:nth-child(4n+3){background:var(--p3);color:#fff;border-color:transparent}
+.sbox{background:linear-gradient(135deg,var(--p1),var(--p2) 60%,var(--p3))}
+.sbox li a:hover{color:var(--p1)}
+footer{background:var(--p1)}
+footer::before{height:4px;background:var(--spectrum)}
+
+/* Keep logos inside their tiles */
+.lg{overflow:hidden}
+.lg img{max-height:80px}
+.lgrid .lg img{max-height:100px}
 </style>
 </head>
 <body>
@@ -502,45 +554,45 @@ const ico = (n, w=2) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentCol
 
 /* ---------- content ---------- */
 const GROUPS = {
-  consultant:{ name:"Consultant", intro:"Six ways Ramesh Prabha helps businesses, brands and campaigns find direction and move with confidence.", c:["#7A52A0","#7E55A8"] },
-  educationist:{ name:"Educationist", intro:"Three ways Ramesh Prabha helps students, teams and communities learn, aim higher and celebrate.", c:["#4D2F73","#6A4690"] }
+  consultant:{ name:"Consultant", intro:"Six ways Ramesh Prabha helps businesses, brands and campaigns find direction and move with confidence.", c:["#3C2460","#8554A0"] },
+  educationist:{ name:"Educationist", intro:"Three ways Ramesh Prabha helps students, teams and communities learn, aim higher and celebrate.", c:["#5B3A81","#B074B2"] }
 };
 const ROLES = {
   consultant:[
-   {id:"business-advisor",name:"Business Advisor",icon:"briefcase",c1:"#7A52A0",c2:"#4D2F73",line:"Plain-spoken guidance on where the business goes next.",
+   {id:"business-advisor",name:"Business Advisor",icon:"briefcase",c1:"#3C2460",c2:"#5B3A81",line:"Plain-spoken guidance on where the business goes next.",
     intro:"Clear, practical guidance for owners and leaders who are deciding where the business goes next.",
     pts:[["Sharpen the plan","Turn goals into priorities, timelines and owners that a team can act on."],["Read the market","Understand customers, competitors and where the next opening sits."],["Decide with confidence","A sounding board for the calls that are hard to make alone."]],pick:["Apollo","Aban","HTC","Central"]},
-   {id:"marketing-consultant",name:"Marketing Consultant",icon:"megaphone",c1:"#7A52A0",c2:"#7E55A8",line:"Marketing that starts with the customer.",
+   {id:"marketing-consultant",name:"Marketing Consultant",icon:"megaphone",c1:"#5B3A81",c2:"#8554A0",line:"Marketing that starts with the customer.",
     intro:"Marketing that starts from the customer and ends in results you can measure.",
     pts:[["Know the audience","Define who you are speaking to and why they should choose you."],["Choose the channels","Balance print, television, radio, outdoor and digital for the budget at hand."],["Plan and review","Campaigns with a clear brief, a calendar and a look back at what worked."]],pick:["INOX","Fitness","Godrej","Rex"]},
-   {id:"branding-consultant",name:"Branding Consultant",icon:"star",c1:"#7E55A8",c2:"#6A4690",line:"A brand people recognise and trust.",
+   {id:"branding-consultant",name:"Branding Consultant",icon:"star",c1:"#8554A0",c2:"#B074B2",line:"A brand people recognise and trust.",
     intro:"A brand that people recognise, remember and trust, from the first sight of the name to the last detail of the pack.",
     pts:[["Name and identity","Names, logos and visual systems that feel like one family."],["Message and voice","One clear promise, said the same way everywhere."],["Consistency","Guidance so every ad, hoarding and brochure carries the same character."]],pick:["Choice","Sanjeevanam","Gold","Lalitha"]},
-   {id:"media-consultant",name:"Media Consultant",icon:"media",c1:"#6A4690",c2:"#7A52A0",line:"The right message in the right medium.",
+   {id:"media-consultant",name:"Media Consultant",icon:"media",c1:"#3C2460",c2:"#8554A0",line:"The right message in the right medium.",
     intro:"Put the right message in front of the right audience, in the right medium, at the right time.",
     pts:[["Media planning","Match the audience to newspapers, television, radio, outdoor and digital."],["Buying and releases","Schedules, releases and follow-through handled with care."],["Review","Look at what reached people and adjust the next round."]],pick:["Puthiya","BSNL","Sarath","hoarding"]},
-   {id:"nativity-consultant",name:"Nativity Consultant",icon:"chat",c1:"#7A52A0",c2:"#A883C4",line:"Messages that sound native to the place.",
+   {id:"nativity-consultant",name:"Nativity Consultant",icon:"chat",c1:"#5B3A81",c2:"#B074B2",line:"Messages that sound native to the place.",
     intro:"Messages that sound native to the place and the people they speak to, in language, tone and imagery.",
     pts:[["Language and copy","Check translations and phrasing so they read naturally, not literally."],["Cultural fit","Spot images, colours and references that may land differently in a region."],["Regional adaptation","Adapt a national idea for local audiences without losing its core."]],pick:["YRG","Puthiya","Gold","Pithambari"]},
-   {id:"political-strategist",name:"Political Strategist",icon:"flag",c1:"#7E55A8",c2:"#6A4690",line:"Communication strategy for campaigns.",
+   {id:"political-strategist",name:"Political Strategist",icon:"flag",c1:"#8554A0",c2:"#5B3A81",line:"Communication strategy for campaigns.",
     intro:"Communication strategy for campaigns that need to reach people clearly and consistently.",
     pts:[["Frame the message","Shape a simple, memorable message from a long list of issues."],["Plan the outreach","Sequence hoardings, press, broadcast and digital across the campaign calendar."],["Keep it consistent","One look and one voice from the first poster to the final rally."]],pick:["hoarding","TAI","BSNL","Sarath"]}
   ],
   educationist:[
-   {id:"career-guidance-counsellor",name:"Career Guidance Counsellor",icon:"compass",c1:"#7A52A0",c2:"#4D2F73",line:"Helping students choose a path and prepare for it.",
+   {id:"career-guidance-counsellor",name:"Career Guidance Counsellor",icon:"compass",c1:"#5B3A81",c2:"#3C2460",line:"Helping students choose a path and prepare for it.",
     intro:"Helping students and young professionals choose a path and prepare to walk it.",
     pts:[["Know yourself","Look at strengths, interests and values before looking at courses."],["See the options","Understand courses, careers and what each one asks of you."],["Make a plan","Turn a choice into steps, with someone to check in along the way."]],pick:["Apollo","Good","IECT","Sarath"]},
-   {id:"motivational-speaker",name:"Motivational Speaker",icon:"mic",c1:"#7E55A8",c2:"#6A4690",line:"Talks that give audiences energy and direction.",
+   {id:"motivational-speaker",name:"Motivational Speaker",icon:"mic",c1:"#8554A0",c2:"#B074B2",line:"Talks that give audiences energy and direction.",
     intro:"Talks that give students, teams and audiences energy, and a direction to point it in.",
     pts:[["Schools and colleges","Sessions that speak to students about effort, choices and confidence."],["Corporate teams","Talks that refresh a team's sense of purpose and pace."],["Public events","An engaging voice for conferences, community gatherings and celebrations."]],pick:["Good","Fitness","Afton","Ajuba"]},
-   {id:"chief-guest",name:"Chief Guest",icon:"award",c1:"#7A52A0",c2:"#7E55A8",line:"A welcome presence at your event.",
+   {id:"chief-guest",name:"Chief Guest",icon:"award",c1:"#3C2460",c2:"#B074B2",line:"A welcome presence at your event.",
     intro:"A welcome presence for school, college, corporate and community events.",
     pts:[["Annual days and convocations","Words and presence that make a milestone feel special."],["Launches and inaugurations","Open a new centre, product or campaign with the right note."],["Awards and felicitations","Recognise achievers in a way they and their families remember."]],pick:["Good","Apollo","Paavai","IECT"]}
   ]
 };
 const ALL = [...ROLES.consultant.map(r=>({...r,g:"consultant"})), ...ROLES.educationist.map(r=>({...r,g:"educationist"}))];
 const CLIENT_NAMES = ["Apollo Computer Education Ltd.","Apollo Group of Colleges","Aban Constructions (P) Ltd.","Aban Off Shore Ltd.","Baashyaam Constructions","BSNL","Best Cast IT Ltd.","Central Cottage Industries Corporation","Choice Deccors","Darshana Traditional Products","DIPR (Tamil Nadu State Government)","DIPR (Andhra Pradesh State Government)","Dynamic Staffing Services Ltd.","Elmarc Electrodes Pvt. Ltd.","Fitness One","Goodshepherd Convent, Ooty","HTC Global Services (India) Pvt Ltd.","India Post","IFFCO","INOX","Kabirdass Motor Co., Ltd.","Khal's Foot World","Kirloskar Construction & Engineers Ltd.","Lalitha Jewellery Mart (P) Ltd.","Madura Travel Service (P) Ltd.","Magnum Clothing (P) Ltd.","Ministry of IT & Telecom","Mithas Labs","Paavai Educational Institutions","P.ORR & Sons","Repco Bank","Sakthi Aromatic Masalas Pvt. Ltd.","Sears Fitness","Shagun Health Products","Sharath Educational Promoters","Shriram Group","Solker Solar Industry Limited","Swiss School of Tourism & Hospitality Ltd","TAI - VHS Chennai","YRG Care"];
-const SPEC = ["#7A52A0","#7E55A8","#4D2F73","#6A4690","#A883C4","#9470B8","#6A4690","#6A4690"];
+const SPEC = ["#3C2460","#5B3A81","#8554A0","#B074B2","#3C2460","#5B3A81","#8554A0","#B074B2"];
 
 /* ---------- small helpers ---------- */
 const sty = r => `--c1:${r.c1};--c2:${r.c2}`;
